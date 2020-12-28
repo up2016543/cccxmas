@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background: #AA2222;
+    background: #992222;
     color: #FFFFCC;
     margin: 0;
     --alt-background: #006600;
@@ -28,4 +28,47 @@ article {
 
 article:nth-of-type(2n) {
     background-color: var(--alt-background);
+}
+
+img {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 400px) {
+    img {
+        border: solid white;
+        border-width: 1rem 1rem 3rem 1rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.25rem 1rem 1rem #00000080;
+    }
+}
+
+    img:nth-of-type:(3n+1) {
+        transform: rotate(2deg);
+    }
+
+    img:nth-of-type:(3n+2) {
+        transform: rotate(-1deg);
+    }
+
+    img:nth-of-type(3n) {
+        transform: rotate(5deg);
+    }
+
+@media screen and (min-width: 600px) {
+    article > div {
+        max-width: 600px;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .portrait {
+        width: 45%;
+    }
 }
